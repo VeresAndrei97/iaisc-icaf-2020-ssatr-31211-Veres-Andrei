@@ -1,0 +1,172 @@
+{
+  "PN":{
+    "Locations":[
+      {
+        "id":"P0",
+        "tokens":"1",
+        "input":[],
+        "output":["T0"]
+      },
+      {
+        "id":"P1",
+        "tokens":"0",
+        "input":["T0"],
+        "output":["T1"]
+      },
+      {
+        "id":"P2",
+        "tokens":"0",
+        "input":["T0"],
+        "output":["T2"]
+      },
+      {
+        "id":"P5",
+        "tokens":"0",
+        "input":["T2"],
+        "output":["T4"]
+      },
+      {
+        "id":"P3",
+        "tokens":"0",
+        "input":["T1"],
+        "output":["T3"]
+      },
+      {
+        "id":"P4",
+        "tokens":"1",
+        "input":["T7","T8"],
+        "output":["T3","T6"]
+      },
+      {
+        "id": "P6",
+        "tokens": "1",
+        "input": ["T7", "T8"],
+        "output": ["T4", "T5"]
+      },
+      {
+        "id": "P7",
+        "tokens": "0",
+        "input": ["T3"],
+        "output": ["T5"]
+      },
+      {
+        "id": "P8",
+        "tokens": "0",
+        "input": ["T4"],
+        "output": ["T6"]
+      },
+      {
+        "id": "P9",
+        "tokens": "0",
+        "input": ["T5"],
+        "output": ["T7"]
+      },
+      {
+        "id": "P10",
+        "tokens": "0",
+        "input": ["T6"],
+        "output": ["T8"]
+      },
+      {
+        "id": "P11",
+        "tokens": "0",
+        "input": ["T7"],
+        "output": ["T9"]
+      },
+      {
+        "id": "P12",
+        "tokens": "0",
+        "input": ["T8"],
+        "output": ["T9"]
+      },
+      {
+        "id": "P13",
+        "tokens": "0",
+        "input": ["T9"],
+        "output": ["T10"]
+      }
+    ],
+    "Transitions":[
+      {
+        "id":"T0",
+        "minTime":"0",
+        "maxTime":"0",
+        "input":["P0"],
+        "output":[
+          "P1",
+          "P2"
+        ]
+      },
+      {
+        "id":"T1",
+        "minTime":"1",
+        "maxTime":"1",
+        "input":["P1"],
+        "output":["P3"]
+      },
+      {
+        "id":"T2",
+        "minTime":"4",
+        "maxTime":"4",
+        "input":["P2"],
+        "output":["P5"]
+      },
+      {
+        "id":"T3",
+        "minTime":"2",
+        "maxTime":"4",
+        "input":["P3","P4"],
+        "output":["P7"]
+      },
+      {
+        "id":"T4",
+        "minTime":"2",
+        "maxTime":"5",
+        "input":["P5","P6"],
+        "output":["P8"]
+      },
+      {
+        "id":"T5",
+        "minTime":"3",
+        "maxTime":"4",
+        "input":["P6","P7"],
+        "output":["P9"]
+      },
+      {
+        "id":"T6",
+        "minTime":"2",
+        "maxTime":"3",
+        "input":["P4","P8"],
+        "output":["P10"]
+      },
+      {
+        "id":"T7",
+        "minTime":"0",
+        "maxTime":"0",
+        "input":["P9"],
+        "output":["P4","P6","P11"]
+      },
+      {
+        "id":"T8",
+        "minTime":"0",
+        "maxTime":"0",
+        "input":["P10"],
+        "output":["P4","P6","P12"]
+      },
+      {
+        "id":"T9",
+        "minTime":"0",
+        "maxTime":"0",
+        "input":["P11","P12"],
+        "output":["P13"]
+      },
+      {
+        "id":"T10",
+        "minTime":"0",
+        "maxTime":"0",
+        "input":["P13"],
+        "output":[]
+      }
+    ]
+  }
+}

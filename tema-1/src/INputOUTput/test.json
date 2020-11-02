@@ -1,0 +1,92 @@
+{
+  "PN":{
+    "Locations":[
+      {
+        "id":"P1",
+        "tokens":"2",
+        "input":["T1"],
+        "output":["T6"]
+      },
+      {
+        "id":"P2",
+        "tokens":"1",
+        "input":["T4"],
+        "output":["T1"]
+      },
+      {
+        "id":"P3",
+        "tokens":"0",
+        "input":["T2"],
+        "output":["T3"]
+      },
+      {
+        "id":"P4",
+        "tokens":"1",
+        "input":["T3"],
+        "output":["T4"]
+      },
+      {
+        "id":"P5",
+        "tokens":"0",
+        "input":["T5"],
+        "output":["T2"]
+      },
+      {
+        "id": "P6",
+        "tokens": "1",
+        "input": ["T6"],
+        "output": ["T5"]
+      },
+      {
+        "id": "P7",
+        "tokens": "0",
+        "input": ["T4"],
+        "output": ["T6"]
+      }
+    ],
+    "Transitions":[
+      {
+        "id":"T1",
+        "minTime":"7",
+        "maxTime":"7",
+        "input":["P2"],
+        "output":["P1"]
+      },
+      {
+        "id":"T2",
+        "minTime":"6",
+        "maxTime":"6",
+        "input":["P1","P5"],
+        "output":["P3"]
+      },
+      {
+        "id":"T3",
+        "minTime":"3",
+        "maxTime":"3",
+        "input":["P3"],
+        "output":["P4"]
+      },
+      {
+        "id":"T4",
+        "minTime":"1",
+        "maxTime":"1",
+        "input":["P4"],
+        "output":["P2","P7"]
+      },
+      {
+        "id":"T5",
+        "minTime":"9",
+        "maxTime":"9",
+        "input":["P6"],
+        "output":["P5"]
+      },
+      {
+        "id":"T6",
+        "minTime":"8",
+        "maxTime":"8",
+        "input":["P7"],
+        "output":["P6"]
+      }
+    ]
+  }
+}
