@@ -12,10 +12,10 @@ public class Main {
         int steps = 15;
         JsonLoader jsonLoader = new JsonLoader();
 
-        if(jsonLoader.loadJson("src/files/input.json")){
+        if(jsonLoader.loadJson("src/INputOUTput/input.json")){
             System.out.println("JSON successfully loaded !");
             try {
-                FileWriter fileWriter = new FileWriter("src/files/output.txt");
+                FileWriter fileWriter = new FileWriter("src/INputOUTput/output.txt");
                 PrintWriter printWriter = new PrintWriter(fileWriter);
                 Simulator simulator = new Simulator();
                 simulator.setSteps(steps);
